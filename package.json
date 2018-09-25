@@ -1,0 +1,19 @@
+{
+  "name": "feedbacksystem",
+  "version": "1.0.0",
+  "description": "feedback system",
+  "main": "app.js",
+  "engine" :{
+    "node":"10.6.0",
+    "npm" : "6.1.0"
+  },
+  "scripts": {
+    "start" : "node app.js"
+  },
+  "author": "Anuj Mishra",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "morgan": "^1.9.1"
+  }
+}
