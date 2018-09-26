@@ -2,7 +2,7 @@ const express = require('express');
 const morgan = require('morgan');
 
 
-const app = express();
+const app = express.Router();
 
 //app.set(morgan('dev'));
 
