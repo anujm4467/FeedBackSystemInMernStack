@@ -1,13 +1,11 @@
 const express = require('express');
-const morgan = require('morgan');
-
 const app = express();
+require('./services/passport');
 
-//app.set(morgan('dev'));
+const morgan = require('morgan');
+app.use(morgan('dev'));
 
-app.get('/', (req, res)=>{
-    res.send({'hi' :'there'});
-});
+require('./routers/authRoutes') (app);
 
 const PORT =  process.env.PORT || 5555;
 app.listen(PORT, (err)=>{
