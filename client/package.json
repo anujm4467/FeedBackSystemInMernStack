@@ -6,8 +6,8 @@
     "/auth/google": {
       "target": "http://localhost:5555"
     },
-    "/api/*" :{
-      "target" : "http://localhost:5555"
+    "/api/*": {
+      "target": "http://localhost:5555"
     }
   },
   "dependencies": {
@@ -18,8 +18,10 @@
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.5",
+    "react-stripe-checkout": "^2.6.3",
     "redux": "^4.0.0",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "stripe": "^6.12.1"
   },
   "scripts": {
     "start": "react-scripts start",

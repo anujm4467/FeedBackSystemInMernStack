@@ -8,6 +8,9 @@ import '../node_modules/materialize-css/dist/css/materialize.min.css';
 import reduxThunk from 'redux-thunk';
 
 
-const store = createStore(()=>reducer, {}, applyMiddleware(reduxThunk));
+const store = createStore(reducer, {}, applyMiddleware(reduxThunk));
 
 ReactDOM.render(<Provider store={store}><App /></Provider> , document.querySelector('#root'));
+
+console.log('Sring key is' , process.env.REACT_APP_STRIPE_KEY);
+console.log('Enviornment is ', process.env.NODE_ENV);

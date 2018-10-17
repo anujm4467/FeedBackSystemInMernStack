@@ -1,6 +1,10 @@
 const express = require('express');
 const app = express();
 
+const bodyParser = require('body-parser');
+app.use(bodyParser.json());
+
+
 require('./models/User');
 require('./services/passport');
 
@@ -24,6 +28,8 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 require('./routers/authRoutes') (app);
+require('./routers/billingRoutes') (app);
+
 
 const PORT =  process.env.PORT || 5555;
 app.listen(PORT, (err)=>{

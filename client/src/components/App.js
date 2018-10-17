@@ -1,13 +1,22 @@
-import React from 'react'
+import React, {Component} from 'react';
 import {Route, BrowserRouter} from 'react-router-dom';
+import {connect} from 'react-redux';
 import Header from "./Header";
+import Landing from './Landing';
+import * as actions from '../actions';
 
-const Landing = ()=><h1>On Landing...</h1>
+
 const DashBoard  = () => <h1>on DeshBoard ...</h1>
 const SurveyNew = () => <h1>On Survey...</h1>
 
 
-const App = ()=>{
+class App extends Component {
+
+   componentDidMount(){
+         this.props.fetchUser();
+   }
+
+   render(){ 
     return(
        <div className= "container"> 
         <BrowserRouter>
@@ -21,5 +30,6 @@ const App = ()=>{
        </div>      
     );
 }
+}
 
-export default App;
+export default connect(null, actions) (App);
